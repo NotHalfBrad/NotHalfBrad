@@ -1,0 +1,13 @@
+.content-panel {
+	font-size: 1rem;
+	margin: 1em 0.8em 1em 0.8em;
+}
+
+.font-content-panel-title {
+	font-family: 'Arial'; 
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px #111111;
+    text-align: left;
+    line-height: 2;
+    font-weight: bold;
+}
