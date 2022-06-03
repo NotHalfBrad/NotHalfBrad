@@ -31,7 +31,7 @@ $title = 'Game Development';
 $sectionName = 'gamedev';
 $logo = getSectionIcon($sectionName);
 $color = getSectionColor($sectionName);
-$link = 'https://www.gamedev.nothalfbrad.com';
+$link = './nothalfbrad/gamedev/';
 drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
 
 $content = 'Photography text here';
@@ -39,7 +39,7 @@ $title = 'Photography';
 $sectionName = 'photo';
 $logo = getSectionIcon($sectionName);
 $color = getSectionColor($sectionName);
-$link = 'https://www.photo.nothalfbrad.com';
+$link = './nothalfbrad/photography/';
 drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
 
 $content = 'Philosophy text here';
@@ -47,7 +47,7 @@ $title = 'Philosophy';
 $sectionName = 'philosophy';
 $logo = getSectionIcon($sectionName);
 $color = getSectionColor($sectionName);
-$link = 'https://www.philosophy.nothalfbrad.com';
+$link = './nothalfbrad/philosophy/';
 drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
 
 $content = 'Bio, Contact information, and other links';
