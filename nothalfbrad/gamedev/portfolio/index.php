@@ -177,16 +177,12 @@ formatGridImage("./projects/b&t.jpg","Black & Tan").
 formatGridImage("./projects/ltn.jpg","Love Thy Neighbor").
 formatGridImage("./projects/ck.jpg","Conquered Kingdoms").'</div></div>';*/
 
-echo '</div></div>';
+
 		drawDataCardSimple($projectList,"","webBG.png","ProjectList");
+echo '</div></div>';
 
-?>
 
-	<div align="center">
-	</div>
-
-<?php
-    include '../../layout/footer.php';
+include '../../layout/footer.php';
 
 
 function formatPhlurb($title, $image, $text)

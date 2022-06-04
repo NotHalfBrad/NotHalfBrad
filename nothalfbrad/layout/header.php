@@ -15,12 +15,12 @@ if(!isset($site_section))
 		BRAD WIGGINS - Pursuits Portal
 		</TITLE>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="https://www.nothalfbrad.com/layout/styles.css">
+		<link rel="stylesheet" type="text/css" href="https://www.nothalfbrad.com/nothalfbrad/layout/styles.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
-		<link rel="stylesheet" href="https://www.nothalfbrad.com/layout/flickity.css" media="screen">
+		<link rel="stylesheet" href="https://www.nothalfbrad.com/nothalfbrad/layout/flickity.css" media="screen">
 		<link rel="icon" type="image/png" href="/layout/fav.png" />
-		<script src="https://www.nothalfbrad.com/layout/flickity.pkgd.min.js"></script>
+		<script src="https://www.nothalfbrad.com/nothalfbrad/layout/flickity.pkgd.min.js"></script>
 	</HEAD>
 	<BODY class="color-bg">
 
