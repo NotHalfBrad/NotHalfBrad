@@ -105,7 +105,7 @@ $admin= '
     }
 
     echo '</div></div><br>';
-    include '../../layout/footer.php';               
+    include '../layout/footer.php';               
 
 
 ?>

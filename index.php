@@ -1,5 +1,5 @@
 <?php
-include './layout/header.php';
+require './nothalfbrad/layout/header.php';
 
 	$intro = '	<div style="position:relative; color:white;">
 					<img src="about.jpg" style="width:100%; height:65vh; object-fit:cover; object-position: 100% 50%;">
@@ -96,6 +96,6 @@ Instagram: @not_half_brad @bradnwhite @bardicimagery @very_brad_artwork';
 </div>
 */
 
-    require './layout/footer.php';
+    require './nothalfbrad/layout/footer.php';
 ?>
 

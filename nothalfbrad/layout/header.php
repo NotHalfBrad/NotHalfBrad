@@ -1,7 +1,7 @@
 <?php 
 include './nothalfbrad/layout/layoutfuncs.php';
 include '../layout/layoutfuncs.php';
-include '/home3/notharad/public_html/layout/layoutfuncs.php'; 
+//include '/home3/notharad/public_html/layout/layoutfuncs.php'; 
 session_start();
 
 if(!isset($site_section))
