@@ -1,6 +1,6 @@
 <?php
 	$site_section = "gamedev";
-	include '../../layout/header.php';
+	include '../layout/header.php';
 
 	drawTitleCard("Game Development");
 ?>
@@ -13,5 +13,5 @@ I hope to have a game development and technology related blog here in the near f
 </div></div>
 
 <?php
-    include '../../layout/footer.php';
+    include '../layout/footer.php';
 ?>

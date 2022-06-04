@@ -9,9 +9,9 @@
 		<meta property="og:image:height" content="813">
 		<meta property="og:description" content="by Not Half Brad">';
 
-	include '../../../layout/layoutfuncs.php';
-	include '../../../photography/photofuncs.php';
-	include '../../../layout/header.php';
+	include '../../layout/layoutfuncs.php';
+	include '../../photography/photofuncs.php';
+	include '../../layout/header.php';
 
 	$data = readJson('./portfolio.json');
 
@@ -218,6 +218,5 @@ function formatGridImage($image, $title, $position="", $company="", $year="")
 	//company
 	return $result;
 }
-
 
 ?>
