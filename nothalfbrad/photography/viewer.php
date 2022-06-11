@@ -55,7 +55,7 @@ if($album->isEnabled == "true" || isAdminUser())*/
     </form>
     ';
 
-	$viewer_height = "80vh";
+	$viewer_height = "75vh";
 
 
 	$visitorCount = countVisitor($album_name, $_SERVER['REMOTE_ADDR']);
@@ -63,9 +63,9 @@ if($album->isEnabled == "true" || isAdminUser())*/
 
 	echo '<div class="datacard-frame color-body" style="width:100%; position:relative;">
 		<table width="100%" style="padding:10px; box-sizing: border-box;"><tr>
-			<td align="left"><a href="./album.php?album='.readifyURL($album_name).'"> &larr; Back to album</a></td>
-			<td align="center">'.$album_name.'</td>
-			<td align="right"><a href="'.$image_loc.'" style="align:right; text-align:right; content-align:right;">full size</a></td>
+			<td align="left" class="font-body"><a href="./album.php?album='.readifyURL($album_name).'"> &larr; Back to album</a></td>
+			<td align="center" class="font-body">'.$album_name.'</td>
+			<td align="right" class="font-body"><a href="'.$image_loc.'" style="align:right; text-align:right; content-align:right;">full size</a></td>
 		</tr></table>
 		
 		<center><div style="position:relative; background-color:rgba(18,18,18,1);">
@@ -75,10 +75,10 @@ if($album->isEnabled == "true" || isAdminUser())*/
 			</div>';
 
 			if($prevImg != null)
-				echo '<a href='.getImageURL($album_name, $prevImg).' style="position:absolute; left:0; top:0; display:inline-block; height:100%; width:42%; vertical-align: middle; text-decoration: none; font-size:10vh; line-height:'.$viewer_height.'; text-align:left;">&#8249;</a>';
+				echo '<a href="'.getImageURL($album_name, $prevImg).'" style="position:absolute; left:0; top:0; display:inline-block; height:100%; width:42%; vertical-align: middle; text-decoration: none; font-size:10vh; line-height:'.$viewer_height.'; text-align:left;">&#8249;</a>';
 
 			if($nextImg != null)
-				echo '<a href='.getImageURL($album_name, $nextImg).' style="position:absolute; right:0; top:0; display:inline-block; height:100%; width:42%; vertical-align: middle; text-decoration: none; font-size:10vh; line-height:'.$viewer_height.'; text-align:right;">&#8250;</a>';
+				echo '<a href="'.getImageURL($album_name, $nextImg).'" style="position:absolute; right:0; top:0; display:inline-block; height:100%; width:42%; vertical-align: middle; text-decoration: none; font-size:10vh; line-height:'.$viewer_height.'; text-align:right;">&#8250;</a>';
 
 			echo '
 			<div style="align:center; position:absolute; bottom:0; display:box; width:100%;">
@@ -105,9 +105,9 @@ if($album->isEnabled == "true" || isAdminUser())*/
 			<div style="background-color:black; width:100%; height:3px;"></div>
 		</div></center>
 
-		<div class="datacard-content">
+		<div class="datacard-content font-body"">
 			<div class="image-title">'.$image_name.'</div>
-			<div>Image desciption would go here</div>
+			<!--<div>Image desciption would go here</div>-->
 			<div><pre>';
 			$exif_aperture = $exif['COMPUTED']['ApertureFNumber'];
 			$exif_shutter = $exif['ExposureTime'];

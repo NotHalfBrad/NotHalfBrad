@@ -1,5 +1,4 @@
 <?php
-
 function LoginCheck(){
 	if( isset($_SESSION['user_id'])){
 		if($_SESSION['user_id'] != 0){//0 is admin brad
@@ -164,6 +163,36 @@ function drawSiteIcon($siteSection = "home", $otherClass = "", $otherStyles = ""
 {
 	$result = getSectionIcon($siteSection, $otherClass, $otherStyles);
 	echo $result;
+}
+
+function getSectionSettings($siteSection = "home")
+{
+	switch($siteSection)
+	{
+		case "home":
+		case "index":
+			$icon = "house";
+			break;
+		case "gamedev":
+			$icon = "space_invader";
+			break;
+		case "photography":
+		case "photo":
+		case "camera":
+		case "cam":
+			$icon = "camera";
+			break;
+		case "philosophy":
+			$icon = "scroll";
+			break;
+		case "contact":
+		case "about":
+			$icon = "speaking_head_in_silhouette";
+			break;
+		default:
+			$icon = "warning";
+			break;
+	}
 }
 
 function getSectionIcon($siteSection = "home", $otherClass = "", $otherStyles = "")

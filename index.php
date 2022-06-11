@@ -1,5 +1,6 @@
 <?php
 require './nothalfbrad/layout/header.php';
+$sect = new Section("home");
 
 	$intro = '	<div style="position:relative; color:white;">
 					<img src="about.jpg" style="width:100%; height:65vh; object-fit:cover; object-position: 100% 50%;">
@@ -13,6 +14,7 @@ require './nothalfbrad/layout/header.php';
 					</div>
   				</div>';
 	drawDataCardSimple($intro);
+	echo $_SERVER['DOCUMENT_ROOT'];
 ?>
 
 <!--<div class="datacard-frame color-body shadow" style="width:100%;">

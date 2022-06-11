@@ -1,12 +1,15 @@
 <?php 
-include './nothalfbrad/layout/layoutfuncs.php';
-include '../layout/layoutfuncs.php';
+//include './nothalfbrad/layout/layoutfuncs.php';
+//include '../layout/layoutfuncs.php';
 //include '/home3/notharad/public_html/layout/layoutfuncs.php'; 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/nothalfbrad/layout/layoutfuncs.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/nothalfbrad/layout/Section.php';
 session_start();
 
 if(!isset($site_section))
 	$site_section = "home";
 //get site_page
+$section = new Section($site_section);
 ?>
 
 <html>
@@ -15,7 +18,7 @@ if(!isset($site_section))
 		BRAD WIGGINS - Pursuits Portal
 		</TITLE>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="https://www.nothalfbrad.com/nothalfbrad/layout/styles.css">
+		<link rel="stylesheet" type="text/css" href="/nothalfbrad/layout/styles.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
 		<link rel="stylesheet" href="https://www.nothalfbrad.com/nothalfbrad/layout/flickity.css" media="screen">
@@ -28,12 +31,15 @@ if(!isset($site_section))
 
 	<!-- mobile menu -->
 				<div class="only-mobile titlebar-mobile topnav color-accent shadow" style="max-width:100%">
-					<a href="javascript:void(0);" class="icon color-accent" onclick="toggleMenu()">
+					<a href="javascript:void(0);" class="icon color-accent font-page-title" onclick="toggleMenu()">
 				    	<i class="fa fa-bars color-accent"></i>
+				    	<!--<?php echo $section->getIconTag(); ?>-->
 				  	</a>
 
-					<span class="font-page-title">Not Half Brad</span>
-					<?php drawSiteIcon("gamedev"); ?>
+					<a href="\" class="icon color-accent font-page-title">Not Half Brad</a>
+						<!--<span class="font-page-title">Not Half Brad</span>-->
+
+
 				  	<!-- Navigation links (hidden by default) -->
 				  	<div id="menuToggle" class="collapse">
 				  		<table width=100% cellpadding=0 cellspacing=0 class="color-nav-bg">
