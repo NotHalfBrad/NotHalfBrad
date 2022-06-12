@@ -1,6 +1,6 @@
 <?php
-require './nothalfbrad/layout/header.php';
-$sect = new Section("home");
+$site_section = "home";
+include './layout/header.php';
 
 	$intro = '	<div style="position:relative; color:white;">
 					<img src="about.jpg" style="width:100%; height:65vh; object-fit:cover; object-position: 100% 50%;">
@@ -14,7 +14,6 @@ $sect = new Section("home");
 					</div>
   				</div>';
 	drawDataCardSimple($intro);
-	echo $_SERVER['DOCUMENT_ROOT'];
 ?>
 
 <!--<div class="datacard-frame color-body shadow" style="width:100%;">
@@ -26,56 +25,74 @@ $sect = new Section("home");
 //these arent the names of pages, which shouldn't change...
 //but they only become pages, when I feel they are a solid enough concept to deserve one.
 
-$about;
+function drawHomePageButton($sectionName, $title, $content)
+{
+	$s = new Section($sectionName);
 
-$content = 'Game Developer by profession and passion.';
-$title = 'Game Development';
+	$link = './' . $sectionName . '/';
+	$logo = $s->getIconTag();
+	$color = $s->icon_color;
+	drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
+}
+
 $sectionName = 'gamedev';
-$logo = getSectionIcon($sectionName);
-$color = getSectionColor($sectionName);
-$link = './nothalfbrad/gamedev/';
-drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
+$title = 'Game Development';
+$content = 'Game Developer by profession and passion.';
+drawHomePageButton($sectionName, $title, $content);
 
-$content = 'Photography text here';
+$sectionName = 'photography';
 $title = 'Photography';
-$sectionName = 'photo';
-$logo = getSectionIcon($sectionName);
-$color = getSectionColor($sectionName);
-$link = './nothalfbrad/photography/';
-drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
+$content = 'Photography text here';
+drawHomePageButton($sectionName, $title, $content);
 
-$content = 'Philosophy text here';
-$title = 'Philosophy';
+/*
 $sectionName = 'philosophy';
-$logo = getSectionIcon($sectionName);
-$color = getSectionColor($sectionName);
-$link = './nothalfbrad/philosophy/';
-drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
+$title = 'Philosophy';
+$content = 'Philosophy text here';
+drawHomePageButton($sectionName, $title, $content);
+*/
 
-$content = 'Bio, Contact information, and other links';
-$title = 'About Brad';
+/*
+$sectionName = 'music';
+$title = 'Music';
+$content = 'Music text here';
+drawHomePageButton($sectionName, $title, $content);
+*/
+
+/*
+$sectionName = 'poet';
+$title = 'Poetry';
+$content = 'Poetry text here';
+drawHomePageButton($sectionName, $title, $content);
+*/
+
+/*
+$sectionName = 'travel';
+$title = 'Travel';
+$content = 'Travel text here';
+drawHomePageButton($sectionName, $title, $content);
+*/
+
+/*
+$sectionName = 'fitness';
+$title = 'Fitness';
+$content = 'Fitness text here';
+drawHomePageButton($sectionName, $title, $content);
+*/
+
+/*
+$sectionName = 'philanthropy';
+$title = 'Philanthropy';
+$content = 'Philanthropy text here';
+drawHomePageButton($sectionName, $title, $content);
+*/
+
 $sectionName = 'about';
-$logo = getSectionIcon($sectionName);
-$color = getSectionColor($sectionName);
-$link = 'https://www.nothalfbrad.com/about.php';
-drawDataCardWLeadingButton($content, $title, $logo, $color, $link);
+$title = 'About Brad';
+$content = 'Bio, Contact information, and other links';
+drawHomePageButton($sectionName, $title, $content);
 
-$philanthropy;
-
-$music = '<div class="font-datacard-title"><i class="em em-musical_score"></i> Performance</div>
-I play harmonica, and am eager to join in for karaoke.';//performance?
-//drawDataCard($music);
-
-$art;//visual art? illustration? Other arts?
-
-$poetry;
-
-$travel = '<div class="font-datacard-title"><i class="em em-airplane"></i> Travel</div>
-I\'m an avid traveller, and love an excuse to visit somewhere unorthodox. ';
-//drawDataCard($travel);
-
-$fitness;
-
+/*
 $social = '<div class="font-datacard-title"><i class="em em-speaking_head_in_silhouette"></i> Social</div>
 email: brad.wiggins@gmail.com<br>
 Twitter: @NotHalfBrad<br>
@@ -98,6 +115,6 @@ Instagram: @not_half_brad @bradnwhite @bardicimagery @very_brad_artwork';
 </div>
 */
 
-    require './nothalfbrad/layout/footer.php';
+    include './layout/footer.php';
 ?>
 

@@ -289,7 +289,7 @@ b {color:#FF9955;}
 /* Style the hamburger menu */
 .topnav a.icon {
   display: inline-block;
-  padding: 10px;
+  padding: 0.3vh;
   color: white;
 }
 
@@ -330,7 +330,7 @@ b {color:#FF9955;}
 /* FONTS */
 .font-page-title {
 	font-family: 'Arial Black'; 
-    font-size: 34px;
+    font-size: 24px;
     color: #FFFFFF;
     text-shadow: 3px 3px 3px #111111;
     text-align: left;;
@@ -431,6 +431,8 @@ b {color:#FF9955;}
     text-align: left;
     text-decoration: none;
 }
+
+.button-link { text-decoration: none; }
 
 .nav-pull-button {
 	width: 100%;

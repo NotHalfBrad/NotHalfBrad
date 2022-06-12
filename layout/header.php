@@ -1,9 +1,8 @@
 <?php 
-//include './nothalfbrad/layout/layoutfuncs.php';
 //include '../layout/layoutfuncs.php';
 //include '/home3/notharad/public_html/layout/layoutfuncs.php'; 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/nothalfbrad/layout/layoutfuncs.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/nothalfbrad/layout/Section.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/layout/layoutfuncs.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/layout/Section.php';
 session_start();
 
 if(!isset($site_section))
@@ -18,12 +17,12 @@ $section = new Section($site_section);
 		BRAD WIGGINS - Pursuits Portal
 		</TITLE>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/nothalfbrad/layout/styles.css">
+		<link rel="stylesheet" type="text/css" href="/layout/styles.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
-		<link rel="stylesheet" href="https://www.nothalfbrad.com/nothalfbrad/layout/flickity.css" media="screen">
+		<link rel="stylesheet" href="https://www.nothalfbrad.com/layout/flickity.css" media="screen">
 		<link rel="icon" type="image/png" href="/layout/fav.png" />
-		<script src="https://www.nothalfbrad.com/nothalfbrad/layout/flickity.pkgd.min.js"></script>
+		<script src="https://www.nothalfbrad.com/layout/flickity.pkgd.min.js"></script>
 	</HEAD>
 	<BODY class="color-bg">
 
@@ -83,27 +82,29 @@ $section = new Section($site_section);
 	<!-- Desktop menu -->
 			<td height=100% valign="top" class="only-desktop bar-width2" style="margin: 0px;"><!-- bar-width2 -->
 				<DIV class="nav-bar color-nav-bg bar-width shadow" style="vertical-align: bottom;"><!-- color-nav--><!-- bar-width -->
-		        	<div class="nav-title color-accent">Not Half Brad</div><BR><BR>
+					<a href="\" class="icon color-accent font-page-title">
+		        		<div class="nav-title color-accent">Not Half Brad</div>
+		        	</a><BR><BR>
 
-		        	<a href="/index.php"><div class="nav-button color-nav-button"><i class="em em-male-technologist" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;&nbsp;Home</div></a>
+		        	<a href="/index.php" class="button-link"><div class="nav-button color-nav-button"><i class="em em-male-technologist" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;&nbsp;Home</div></a>
 
-		        	<a href= "/gamedev/"><div class="nav-button color-nav-button"><i class="em em-space_invader" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;GameDev</div></a>
+		        	<a href= "/gamedev/" class="button-link"><div class="nav-button color-nav-button"><i class="em em-space_invader" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;GameDev</div></a>
 		        	<?php if($site_section == "gamedev") echo'
-		        	<a href= "/gamedev/past_titles.php"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Past Titles</div></a>
-		        	<a href= "/gamedev/portfolio/"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Portfolio</div></a>
-		        	<a href= "/gamedev/resume.php"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Resume</div></a>';
+		        	<a href= "/gamedev/past_titles.php" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Past Titles</div></a>
+		        	<a href= "/gamedev/portfolio/" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Portfolio</div></a>
+		        	<a href= "/gamedev/resume.php" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Resume</div></a>';
 		        	?>
 
-		        	<a href= "/photography/"><div class="nav-button color-nav-button"><i class="em em-camera" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;Photography</div></a>
+		        	<a href= "/photography/" class="button-link"><div class="nav-button color-nav-button"><i class="em em-camera" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;Photography</div></a>
 		        	<?php if($site_section == "photography") echo'
-		        	<a href= "/photography/gallery.php"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Photo Gallery</div></a>
-		        	<a href= "/photography/showcase.php"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Fav Images</div></a>';
+		        	<a href= "/photography/gallery.php" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Photo Gallery</div></a>
+		        	<a href= "/photography/showcase.php" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Fav Images</div></a>';
 		        	?>
 
-		        	<a href= "/philosophy/"><div class="nav-button color-nav-button"><i class="em em-scroll" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;Philosophy</div></a>
+		        	<a href= "/philosophy/" class="button-link"><div class="nav-button color-nav-button"><i class="em em-scroll" style="filter: grayscale(100%);"></i> &nbsp;&nbsp;Philosophy</div></a>
 		        	<?php if($site_section == "philosophy") echo'
-		        	<a href= "/philosophy/background.php"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Background</div></a>
-		        	<a href= "/philosophy/recommended.php"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Recommended</div></a>';
+		        	<a href= "/philosophy/background.php" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Background</div></a>
+		        	<a href= "/philosophy/recommended.php" class="button-link"><div class="nav-button color-nav-button-sub" style="margin-left:22px;">Recommended</div></a>';
 		        	?>
 		        	
 		        </DIV>

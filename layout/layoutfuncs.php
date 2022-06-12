@@ -23,7 +23,7 @@ function isAdminUser(){
 
 function makeIdentifier($prefix, $memo){
 	//open json file
-	$file = '/home3/notharad/public_html/layout/identifiers.json';
+	$file = $_SERVER['DOCUMENT_ROOT'] . './layout/identifiers.json';
 	//error if doenst exist
 	$strJsonFileContents = file_get_contents($file) or die('Problem accessing identifier data!');
 	$data = json_decode($strJsonFileContents, true);
@@ -159,43 +159,13 @@ function button($text, $link, $bgColorClass, $newtab = false, $width= "240px", $
 	return $result;
 }
 
-function drawSiteIcon($siteSection = "home", $otherClass = "", $otherStyles = "")
+/*function drawSiteIcon($siteSection = "home", $otherClass = "", $otherStyles = "")
 {
 	$result = getSectionIcon($siteSection, $otherClass, $otherStyles);
 	echo $result;
-}
+}*/
 
-function getSectionSettings($siteSection = "home")
-{
-	switch($siteSection)
-	{
-		case "home":
-		case "index":
-			$icon = "house";
-			break;
-		case "gamedev":
-			$icon = "space_invader";
-			break;
-		case "photography":
-		case "photo":
-		case "camera":
-		case "cam":
-			$icon = "camera";
-			break;
-		case "philosophy":
-			$icon = "scroll";
-			break;
-		case "contact":
-		case "about":
-			$icon = "speaking_head_in_silhouette";
-			break;
-		default:
-			$icon = "warning";
-			break;
-	}
-}
-
-function getSectionIcon($siteSection = "home", $otherClass = "", $otherStyles = "")
+/*function getSectionIcon($siteSection = "home", $otherClass = "", $otherStyles = "")
 {
 	switch($siteSection)
 	{
@@ -260,5 +230,5 @@ function getSectionColor($siteSection = "home")
 	}
 
 	return $result;
-}
+}*/
 ?>
